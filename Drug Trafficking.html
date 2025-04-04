@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Security: Drug Trafficking Detection</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    header {
+      background-color: #1e1e2f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #1e1e2f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      background-color: white;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #1e1e2f;
+    }
+    .scan-button {
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    .scan-button:hover {
+      background-color: #0056b3;
+    }
+    #results {
+      margin-top: 20px;
+      background-color: #f0f8ff;
+      padding: 15px;
+      border-left: 5px solid #007bff;
+      border-radius: 8px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 15px;
+      line-height: 1.6;
+      display: none;
+    }
+    .loader {
+      border: 5px solid #f3f3f3;
+      border-top: 5px solid #007bff;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Software Solution to Detect Drug Trafficking on Telegram, WhatsApp & Instagram</h1>
+  </header>
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>
+        This cyber security tool aims to identify users behind Telegram, WhatsApp, and Instagram channels used for drug trafficking in India. It detects suspicious activity and attempts to triangulate identifying information such as IP address, phone number, and email ID.
+      </p>
+    </section>
+    <section>
+      <h2>Live Channel/Handle Scanner</h2>
+      <p>Click the button below to simulate scanning for suspicious Telegram, WhatsApp or Instagram activity.</p>
+      <button class="scan-button" onclick="scanActivity()">🔍 Start Scan</button>
+      <div id="results"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Cyber Security Division | All rights reserved.</p>
+  </footer>
+  <script>
+    function scanActivity() {
+      const results = document.getElementById("results");
+      results.style.display = "block";
+      results.innerHTML = '<span class="loader"></span><strong>Scanning live channels and handles...</strong>';
+
+      setTimeout(() => {
+        results.innerHTML = `
+          <strong>Scan Results:</strong><br><br>
+          🔹 <strong>Suspicious Telegram Bot:</strong> @LSDstoreBot<br>
+          🔹 <strong>Detected Keywords:</strong> LSD, MDMA, Mephedrone<br>
+          🔹 <strong>Approx. Location:</strong> Mumbai, India<br>
+          🔹 <strong>IP Address:</strong> 182.73.***.***<br>
+          🔹 <strong>Associated Phone Number:</strong> +91-98******23<br>
+          🔹 <strong>Email:</strong> anonymous***@protonmail.com
+        `;
+      }, 2000);
+    }
+  </script>
+</body>
+</html>
